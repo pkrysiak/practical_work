@@ -4,28 +4,13 @@
     xsi:noNamespaceSchemaLocation="iTunesSchema.xsd">
     <Users>
         <User id ="j.silver" password="asfasf">
-            <Name>Jonas</Name>
-            <Surname>Silver</Surname>
-            <DateBirth>1990-08-23</DateBirth>
-            <Age>24</Age>
-            <Sex>Male</Sex>
-            <Country>Canada</Country>
+            <Email>j.silver@hotmail.com</Email>
         </User>
         <User id = "m.anne" password="hrs362h">
-            <Name>Mary</Name>
-            <Surname>Anne</Surname>
-            <DateBirth>1989-03-14</DateBirth>
-            <Age>25</Age>
-            <Sex>Female</Sex>
-            <Country>France</Country>
+            <Email>m.anne@gmail.com</Email>
         </User>
         <User id = "d.fisher" password="sgsg242">
-            <Name>Derek</Name>
-            <Surname>Fisher</Surname>
-            <DateBirth>1987-06-16</DateBirth>
-            <Age>27</Age>
-            <Sex>Male</Sex>
-            <Country>U.S.A.</Country>
+            <Email>d.fisher@gmail.com</Email>
         </User>
     </Users>
     <Tracks>
@@ -33,36 +18,41 @@
             <Album>Random Access Memories</Album>
             <Genre>Funk</Genre>
             <Duration>4:08</Duration>
+            <Year>2013</Year>
         </Track>
         <Track id = "t26532" title = "Attak (feat. Danny Brown)" artist = "Rustie">
             <Album>Green Language</Album>
             <Genre>Electronic</Genre>
             <Duration>3:01</Duration>
+            <Year>2014</Year>
         </Track>
         <Track id = "t15225" title = "Feels Like We Only Go Backwards" artist = "Tame Impala">
             <Album>Lonerism</Album>
             <Genre>Rock</Genre>
             <Duration>3:12</Duration>
+            <Year>2012</Year>
         </Track>
         <Track id = "t58684" title = "Swimming Pools (Drank)" artist = "Kendrick Lamar">
             <Album>Good Kid, Mad City</Album>
             <Genre>Rap</Genre>
             <Duration>5:13</Duration>
+            <Year>2012</Year>
         </Track>
         <Track id = "t25132" title = "Blood On The Leaves" artist = "Kanye West">
             <Album>Yeezus</Album>
             <Genre>Rap</Genre>
             <Duration>6:00</Duration>
+            <Year>2013</Year>
         </Track>
     </Tracks>
     <Playlists>
-        <Playlist id = "pl32535">
+        <Playlist id = "pl32535" user="j.silver">
             <PlTracks>
-                <PlTrack pltid = "t97124" title = "Get Lucky (feat. Pharrell)" year = "2013"/>
-                <PlTrack pltid = "t26532" title = "Attak (feat. Danny Brown)" year = "2014"/>
-                <PlTrack pltid = "t15225" title = "Feels Like We Only Go Backwards" year = "2012"/>
-                <PlTrack pltid = "t58684" title = "Swimming Pools (Drank)" year = "2012"/>
-                <PlTrack pltid = "t25132" title = "Blood On The Leaves" year = "2013"/>
+                <PlTrack pltid = "t97124"/>
+                <PlTrack pltid = "t26532"/>
+                <PlTrack pltid = "t15225"/>
+                <PlTrack pltid = "t58684"/>
+                <PlTrack pltid = "t25132"/>
             </PlTracks>
         </Playlist>
     </Playlists>

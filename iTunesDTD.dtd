@@ -4,28 +4,25 @@
 <!ELEMENT iTunes (Users, Tracks, Playlists) >
 
 <!ELEMENT Users (User+) >
-<!ELEMENT User (Name, Surname, DateBirth, Age, Sex, Country)>
+<!ELEMENT User (Email)>
 <!ATTLIST User %idAttribute;>
 <!ATTLIST User password CDATA #REQUIRED >
-<!ELEMENT Name (#PCDATA) >
-<!ELEMENT Surname (#PCDATA) >
-<!ELEMENT DateBirth (#PCDATA) >
-<!ELEMENT Age (#PCDATA) >
-<!ELEMENT Sex (#PCDATA) >
-<!ELEMENT Country (#PCDATA) >
+<!ELEMENT Email (#PCDATA) >
 
 <!ELEMENT Tracks (Track+) >
-<!ELEMENT Track (Album, Genre, Duration)>
+<!ELEMENT Track (Album, Genre, Duration, Year)>
 <!ATTLIST Track %idAttribute;>
 <!ATTLIST Track title CDATA #REQUIRED >
 <!ATTLIST Track artist CDATA #REQUIRED >
 <!ELEMENT Album (#PCDATA) >
 <!ELEMENT Genre (#PCDATA) >
 <!ELEMENT Duration (#PCDATA) >
+<!ELEMENT Year (#PCDATA) >
 
 <!ELEMENT Playlists (Playlist+)>
 <!ELEMENT Playlist (PlTracks) >
 <!ATTLIST Playlist %idAttribute;>
+<!ATTLIST Playlist user IDREF #REQUIRED >
 <!ELEMENT PlTracks (PlTrack+) >
 <!ELEMENT PlTrack (#PCDATA) >
 <!ATTLIST PlTrack pltid IDREF #REQUIRED >

@@ -9,12 +9,7 @@
                             <xs:element name = "User" minOccurs="1" maxOccurs="unbounded">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="Name" type="xs:string"/>
-                                        <xs:element name="Surname" type="xs:string"/>
-                                        <xs:element name="DateBirth" type="xs:date"/>
-                                        <xs:element name="Age" type="xs:integer"/>
-                                        <xs:element name="Sex" type="xs:string"/>
-                                        <xs:element name="Country" type="xs:string"/>
+                                        <xs:element name="Email" type="xs:string"/>
                                     </xs:sequence>
                                     <xs:attribute name="id" type="xs:NCName" use="required"/>
                                     <xs:attribute name="password" type="xs:string" use="required"/>
@@ -36,6 +31,7 @@
                                         <xs:element name="Album" type="xs:string"/>
                                         <xs:element name="Genre" type="xs:string"/>
                                         <xs:element name="Duration" type="xs:string"/>
+                                        <xs:element name="Year" type="xs:integer"/>
                                     </xs:sequence>
                                     <xs:attribute name="id" type="xs:string" use="required"/>
                                     <xs:attribute name="title" type="xs:string" use="required"/>
@@ -61,8 +57,6 @@
                                                     <xs:element name="PlTrack" minOccurs="1" maxOccurs="unbounded">
                                                         <xs:complexType>
                                                             <xs:attribute name="pltid" type="xs:string"/>
-                                                            <xs:attribute name="title" type="xs:string"/>
-                                                            <xs:attribute name="year" type="xs:integer"/>
                                                         </xs:complexType>
                                                     </xs:element>
                                                 </xs:sequence>
@@ -70,6 +64,7 @@
                                         </xs:element>
                                     </xs:sequence>
                                     <xs:attribute name="id" type="xs:string"/>
+                                    <xs:attribute name="user" type="xs:string"/>
                                 </xs:complexType>
                                 <xs:key name="playlistID">
                                     <xs:selector xpath="Playlist"/>
@@ -85,6 +80,11 @@
         <xs:keyref refer="trackID" name="pltid">
             <xs:selector xpath="./Playlists/Playlist/PlTracks/PlTrack"/>
             <xs:field xpath="@pltid"/>
+        </xs:keyref>
+        
+        <xs:keyref refer="userID" name="uid">
+            <xs:selector xpath="./Playlists/Playlist"/>
+            <xs:field xpath="@user"/>
         </xs:keyref>
     </xs:element>
 </xs:schema>
